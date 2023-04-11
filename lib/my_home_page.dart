@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shake/shake.dart';
+import 'package:shake_alarm_flutter/alarm_page.dart';
 import 'package:shake_alarm_flutter/bloc/qoute_bloc/qoute_bloc.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -33,14 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
             duration: const Duration(milliseconds: 500),
             height: double.maxFinite,
             width: double.maxFinite,
-            color: state.backColor,
+            color: state.color["backColor"],
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Card(
                   margin: const EdgeInsets.all(40),
                   elevation: 4,
-                  color: state.cardColor,
+                  color: state.color["cardColor"],
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
@@ -78,6 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => const AlarmPage()),
+          );
+        },
+        child: const Icon(Icons.alarm_add),
       ),
     );
   }

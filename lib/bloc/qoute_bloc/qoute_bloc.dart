@@ -62,26 +62,6 @@ class QouteBloc extends Bloc<QouteEvent, QouteState> {
     },
   ];
 
-  // List<Color> colors = [
-  //   Colors.blueAccent[100]!,
-  //   Colors.purple[100]!,
-  //   Colors.teal[100]!,
-  //   Colors.red[100]!,
-  //   Colors.pink[100]!,
-  //   Colors.cyan[100]!,
-  //   Colors.blueGrey[100]!,
-  // ];
-
-  List<Color> cardColors = [
-    Colors.blueAccent[400]!,
-    Colors.purple[400]!,
-    Colors.teal[400]!,
-    Colors.red[400]!,
-    Colors.purple[400]!,
-    Colors.cyan[400]!,
-    Colors.blueGrey[400]!,
-  ];
-
   List<Qoute> qoutes = [
     Qoute(
       qoute:

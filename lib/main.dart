@@ -1,10 +1,15 @@
+import 'package:alarm/alarm.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'bloc/qoute_bloc/qoute_bloc.dart';
 import 'my_home_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+  await Alarm.init(showDebugLogs: true);
   runApp(const MyApp());
 }
 
